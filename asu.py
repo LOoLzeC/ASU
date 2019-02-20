@@ -14,8 +14,8 @@ try:
 	import bs4
 	import mechanize
 except:
-	print("[!] please install mechanize&bs4 first bro")
-	print("[*] are u noob? command: pip2 install mechanize;pip2 install bs4")
+	print("[!] please install mechanize,bs4,requests first bro")
+	print("[*] are u noob? command: pip2 install mechanize;pip2 install bs4;pip2 install requests")
 
 _KONTOOL = ""
 _TARGETS = ""
