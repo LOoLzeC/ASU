@@ -5,7 +5,6 @@
 import re
 import random
 import getpass
-import threading
 try:
 	import bs4
 	import mechanize
