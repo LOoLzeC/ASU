@@ -8,11 +8,10 @@ import base64
 import random
 import getpass
 import marshal
-import requests
-import threading
 try:
 	import bs4
 	import mechanize
+	import requests
 except:
 	print("[!] please install mechanize,bs4,requests first bro")
 	print("[*] are u noob? command: pip2 install mechanize;pip2 install bs4;pip2 install requests")
