@@ -21,7 +21,7 @@ menu ="""
   %s{%s06%s} Redirect To Cookie HighJack Attacks Vectors
   %s{%s07%s} Redirect To GPS Attacks Vectors
   %s{%s08%s} ASU Server Listener
-  %s{%s09%s} Check Update
+  %s{%s09%s} Mass Reports Status
   %s{%s10%s} Byee"""%(
 	N,G,N,
 	N,G,N,
