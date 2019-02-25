@@ -142,4 +142,3 @@ class report():
 			except Exception as __errors__:
 				print "%s[!]%s %s"%(R,N,__errors__)
 				pass
-report()
