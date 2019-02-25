@@ -18,6 +18,7 @@ from data import create_server
 from data import chatSpammer
 from data import grupSpammer
 from data import multiBruteforce
+from data import reportContent
 print(banner._asu_banner())
 cache.cleanCache()
 
@@ -92,6 +93,10 @@ class ASU:
 			create_server.gps()
 		elif (asw == "8" or asw == "08"):
 			listen.listen()
+		elif (asw == "9" or asw == "09"):
+			reportContent.reportContent()
+		elif (asw == "10"):
+			exit()
 		elif (asw.lower() == "banner"):
 			banner.cekPlatform()
 			print(banner._asu_banner())
