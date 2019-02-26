@@ -5,13 +5,9 @@ import base64
 import bs4,sys
 import getpass
 import requests
-import marshal
 import threading,zlib
 from data.color import *
-'''
-	I deliberately slowed down, because if it's fast it
-	won't works
-'''
+
 cout=0
 
 class reportContent():
@@ -32,11 +28,13 @@ class reportContent():
 			try:
 				cout+=1
 				open("%s_successReport.html"%(
-				cout)).write(self._req.post(url,
-				data=kwargs).text)
+				cout),"w").write("{}".format(
+				self._req.post(url,
+				data=kwargs).text))
 				print "\r[%s+%s] Reporting %s/%s ..      "%(G,N,cout,leng
 				),;sys.stdout.flush()
-			except:pass
+			except:
+				pass
 		else:
 			exit("%s[!]%s Unknown answer for question proof: %s"%(R,N,prof))
 	def login(self):
