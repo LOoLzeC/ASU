@@ -42,7 +42,7 @@ class asuBrute(threading.Thread):
 						}
 			).url
 			if "save-device" in self._req or "m_sess" in self._req:
-				print "\n[+] Found     : %s -> %s\n\r"%(self._email,
+				print "\r[+] Found     : %s -> %s"%(self._email,
 				self._pasw)
 				_found.append(" | %s -> %s"%(self._email,
 				self._pasw))
