@@ -52,7 +52,8 @@ class asuBrute(threading.Thread):
 				self._pasw)
 				_cekpoin.append(" - %s - %s"%(self._email,
 				self._pasw))
-			print "\r[%s*%s] Cracking %s/%s "%(G,N,initz),;sys.stdout.flush()
+			print "\r[%s*%s] Cracking %s/%s"%(G,N,initz,
+			self._many),;sys.stdout.flush()
 			
 		except:pass
 
