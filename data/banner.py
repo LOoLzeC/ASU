@@ -10,6 +10,7 @@
 from data.color import *
 import random,os,sys
 from data import cache
+import requests
 cache.cleanCache()
 
 menu ="""
@@ -22,7 +23,11 @@ menu ="""
   %s{%s07%s} Redirect To GPS Attacks Vectors
   %s{%s08%s} ASU Server Listener
   %s{%s09%s} Mass Reports Status
-  %s{%s10%s} Byee"""%(
+  %s{%s10%s} Auto Add Group Members
+  %s{%s11%s} Check Update.
+  %s{%s12%s} Byee"""%(
+	N,G,N,
+	N,G,N,
 	N,G,N,
 	N,G,N,
 	N,G,N,
@@ -33,7 +38,7 @@ menu ="""
 	N,G,N,
 	N,G,N,
 	N,G,N)
-
+	
 banner1 = """
 %s%s
    _____    _____________ ___ 
