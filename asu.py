@@ -1,4 +1,4 @@
-#-*-coding:utf-8-*-
+##-*-coding:utf-8-*-
 # Coded By Deray
 '''
 	 Rebuild Copyright Can't make u real programmer
@@ -7,7 +7,7 @@
 # instagram: @reyy05_
 # facebook: https://facebook.com/achmad.luthfi.hadi.3
 
-import os,sys
+import os,sys,requests
 from data import banner
 banner.cekPlatform()
 from data import listen
@@ -19,6 +19,7 @@ from data import chatSpammer
 from data import grupSpammer
 from data import multiBruteforce
 from data import reportContent
+from data import auto_addgrup
 print(banner._asu_banner())
 cache.cleanCache()
 
@@ -96,7 +97,20 @@ class ASU:
 		elif (asw == "9" or asw == "09"):
 			reportContent.reportContent()
 		elif (asw == "10"):
-			exit()
+			auto_addgrup.grup()
+		elif (asw == "11"):
+			print("[%s*%s] Checking update ..."%(G,N))
+			r=requests.get("https://raw.githubusercontent.com/LOoLzeC/ASU/master/raw/version.txt").text
+			if r.split("\n")[0] !="v.0.2":
+				print("[%s*%s] Asu has new updated to v.0.3"%(G,N))
+				print("[%s#%s] Updating Asu Toolkit ..."%(G,N))
+				os.system("git pull")
+				print "%s[%s**%s]%s Asu was updated. ¯\_(ツ)_/¯"%(G,R,G,N)
+				exit()
+			else:
+				print("%s[%s*%s]%s No update available ¯\_(ツ)_/¯"%(G,R,G,N))
+		elif (asw == "12"):
+			exit("%s[%s*%s%s]%s Bye ¯\_(ツ)_/¯"%(C,R,N,C,N))
 		elif (asw.lower() == "banner"):
 			banner.cekPlatform()
 			print(banner._asu_banner())
