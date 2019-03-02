@@ -19,11 +19,11 @@ menu ="""
   %s{%s03%s} Chat Spammers Attack Vectors
   %s{%s04%s} Group Chat Spammers Attacks Vectors
   %s{%s05%s} Multi Reports Attacks Vectors
-  %s{%s06%s} Redirect To Cookie HighJack Attacks Vectors
-  %s{%s07%s} Redirect To GPS Attacks Vectors
-  %s{%s08%s} ASU Server Listener
-  %s{%s09%s} Mass Reports Status
-  %s{%s10%s} Auto Add Group Members
+  %s{%s06%s} Auto Add Group Members
+  %s{%s07%s} Auto Riset Passwords Attacks Vectors
+  %s{%s08%s} Redirect To Cookie HighJacking Attacks Vectors
+  %s{%s09%s} Redirect To GPS Attacks Vectors
+  %s{%s10%s} ASU Server Listener
   %s{%s11%s} Check Update.
   %s{%s12%s} Byee"""%(
 	N,G,N,
