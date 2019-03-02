@@ -1,4 +1,4 @@
-###-*-coding:utf-8-*-
+##-*-coding:utf-8-*-
 # Coded By Deray
 '''
 	 Rebuild Copyright Can't make u real programmer
@@ -14,6 +14,8 @@ from data import listen
 from data import cache
 from data.color import *
 from data import reports
+from data import dumpper
+from data import risetPass
 from data import create_server
 from data import chatSpammer
 from data import grupSpammer
@@ -43,6 +45,7 @@ class ASU:
 		elif (asw == ""):
 			pass
 		elif (asw == "2" or asw == "02"):
+			dumpper.pilihan()
 			multiBruteforce._prepares()
 		elif (asw == "3" or asw == "03"):
 			try:
@@ -87,28 +90,39 @@ class ASU:
 				print("%s[!]%s %s"%(R,N,f))
 				sys.exit("\n[- User Interrupt.")
 		elif (asw == "5" or asw == "05"):
-			reports.report()
+			print "\n\t[ Select Actions ]\n"
+			print "{%s01%s} Report Status"%(G,N)
+			print "{%s02%s} Mass Report"%(G,N)
+			i=raw_input("\n%s[%s+%s] %sActions>> "%(
+			G,R,G,N))
+			if (i == "1" or i == "01"):
+				reportContent.reportContent()
+			elif (i == "2" or i == "02"):
+				reports.report()
+			else:sys.exit("%s[!]%s invalid options!"%(R,N))
 		elif (asw == "6" or asw == "06"):
-			create_server.locator()
-		elif (asw == "7" or asw == "07"):
-			create_server.gps()
-		elif (asw == "8" or asw == "08"):
-			listen.listen()
-		elif (asw == "9" or asw == "09"):
-			reportContent.reportContent()
-		elif (asw == "10"):
 			auto_addgrup.grup()
+		elif (asw == "7" or asw == "07"):
+			risetPass.risetPass()
+		elif (asw == "8" or asw == "08"):
+			create_server.locator()
+		elif (asw == "9" or asw == "09"):
+			create_server.gps()
+		elif (asw == "10"):
+			listen.listen()
 		elif (asw == "11"):
 			print("[%s*%s] Checking update ..."%(G,N))
 			r=requests.get("https://raw.githubusercontent.com/LOoLzeC/ASU/master/raw/version.txt").text
-			if r.split("\n")[0] !="v.0.2":
-				print("[%s*%s] Asu has new updated to v.0.3"%(G,N))
+			if r.split("\n")[0] !="v.0.3":
+				print("[%s*%s] Asu has new updated to v.0.4"%(G,N))
 				print("[%s#%s] Updating Asu Toolkit ..."%(G,N))
 				os.system("git pull")
 				print "%s[%s**%s]%s Asu was updated. ¯\_(ツ)_/¯"%(G,R,G,N)
 				exit()
 			else:
 				print("%s[%s*%s]%s No update available ¯\_(ツ)_/¯"%(G,R,G,N))
+				
+		
 		elif (asw == "12"):
 			exit("%s[%s*%s%s]%s Bye ¯\_(ツ)_/¯"%(C,R,N,C,N))
 		elif (asw.lower() == "banner"):
@@ -121,4 +135,3 @@ class ASU:
 			
 if __name__ == "__main__":
 	ASU()
-
