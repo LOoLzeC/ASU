@@ -220,8 +220,7 @@ class dumpper:
 			print "[%s*%s] Rob id ..."%(G,N)
 				
 		memex=[]
-		print("[%s*%s] output: out/aidi.txt"%(G,N))
-		open("out/aidi.txt","w").close()
+		open("aidi.txt","w").close()
 		while True:
 			k=bs4.BeautifulSoup(
 				self.br.response().read(),
@@ -232,10 +231,10 @@ class dumpper:
 						pass
 					else:
 						xx=re.findall("/(.*?)\?",x["href"])[0]
-						if xx in open("out/aidi.txt").read():
+						if xx in open("aidi.txt").read():
 							pass
 						else:
-							open("out/aidi.txt","a").write(xx+"\n")
+							open("aidi.txt","a").write(xx+"\n")
 							memex.append(xx)
 							try:
 								print "\r[%s+%s] GET: %s id -> ctrl+c if number not running max "%(G,N,len(memex)),;sys.stdout.flush()
@@ -255,7 +254,8 @@ class pilihan():
 		print "{%s01%s} Ambil ID Dari Teman anda"%(G,N)
 		print "{%s02%s} Rampok ID dari teman target"%(G,N)
 		print "{%s03%s} JUMPING"%(G,N)
-		print "{%s04%s} Start Multi BruteForce\n"%(G,N)
+		print "{%s04%s} Start Multi BruteForce"%(G,N)
+		print "{%s05%s} Start MultiBruteForce v.2\n"%(G,N)
 		f=raw_input("%s[%s+%s]%s Actions>> "%(G,R,G,N))
 		if f == "1" or f == "01":
 			self.a()
@@ -265,6 +265,8 @@ class pilihan():
 			self.c()
 		elif f == "4" or f == "04":
 			self.d()
+		elif f == "5" or f == "05":
+			multiBruteforce.prepare()
 		else:sys.exit("%s[!]%s Invalid options!"%(R,N))
 		
 	def a(self):
