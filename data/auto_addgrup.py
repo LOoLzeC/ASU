@@ -188,5 +188,5 @@ class grup:
 				else:
 					print "[%s*%s] %s %sAlready Added.%s"%(G,N,self.x,R,N)
 			except:
-				sys.exit("%s[!]%s JANGAN SEMBARANG ADD LU BUKAN ADMIN KONTOL!!!"%(R,N))
+				
 			
