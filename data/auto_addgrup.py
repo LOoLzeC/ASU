@@ -187,6 +187,5 @@ class grup:
 					print "[%s*%s] %s added."%(G,N,self.x)
 				else:
 					print "[%s*%s] %s %sAlready Added.%s"%(G,N,self.x,R,N)
-			except:
-				
+			except:pass
 			
