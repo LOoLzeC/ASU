@@ -220,7 +220,8 @@ class dumpper:
 			print "[%s*%s] Rob id ..."%(G,N)
 				
 		memex=[]
-		open("aidi.txt","w").close()
+		print("[%s*%s] output: out/aidi.txt"%(G,N))
+		open("out/aidi.txt","w").close()
 		while True:
 			k=bs4.BeautifulSoup(
 				self.br.response().read(),
@@ -231,10 +232,10 @@ class dumpper:
 						pass
 					else:
 						xx=re.findall("/(.*?)\?",x["href"])[0]
-						if xx in open("aidi.txt").read():
+						if xx in open("out/aidi.txt").read():
 							pass
 						else:
-							open("aidi.txt","a").write(xx+"\n")
+							open("out/aidi.txt","a").write(xx+"\n")
 							memex.append(xx)
 							try:
 								print "\r[%s+%s] GET: %s id -> ctrl+c if number not running max "%(G,N,len(memex)),;sys.stdout.flush()
