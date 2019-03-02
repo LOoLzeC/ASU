@@ -44,7 +44,7 @@ banner1 = """
    _____    _____________ ___ 
   /  _  \  /   _____/    |   \
 |
- /  /_\  \ \_____  \|    |   /%sToolkit v.2%s
+ /  /_\  \ \_____  \|    |   /%sToolkit v.3def%s
 /    |    \/        \    |  /%sCoded By Deray%s
 \____|__  /_______  /______/%sFacebook Hacking Tools%s
         \/        \/ 
@@ -54,7 +54,7 @@ banner1 = """
 banner2 = """%s%s
 
         .d8b.  .d8888. db    db 
-       d8' `8b 88'  YP 88    88 %sv.2def%s
+       d8' `8b 88'  YP 88    88 %sv.3def%s
        88ooo88 `8bo.   88    88 %sFacebook%s
        88~~~88   `Y8b. 88    88 %sHacking%s
        88   88 db   8D 88b  d88 %sToolkit%s
@@ -67,7 +67,7 @@ banner2 = """%s%s
 
 banner3 = """
                            __
-               _______    /*_>-<
+               _______    /*_>-< v3
            ___/ _____ \__/ /
           <____/     \____/
         Asu Toolkit By Deray
@@ -80,7 +80,7 @@ banner4 = """
       \__/
       /^/
      ( (              -ASU TOOLKIT-
-     \_\_____   - Facebook Hacking Toolkit -
+     \_\_____   - Facebook Hacking Toolkit v.0.3def -
      (_______)
     (_________()Oo
 %s
