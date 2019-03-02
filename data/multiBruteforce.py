@@ -137,7 +137,7 @@ class thread:
 		r=requests.post(
 			url,data=
 				{
-					"email":id,
+					"email":id.replace("\n",""),
 					"pass":ps,
 					"login":sb
 				}
@@ -178,12 +178,12 @@ class prepare:
 		if len(fo) !=0:
 			print "%s[!]%s found: %s"%(G,N,len(fo))
 			for x in fo:
-				print "[%s+%s] %s"%(G,N,x)
+				print "[%s+%s] %s"%(G,N,x.replace("\n",""))
 		else:print "%s[:(]%s no result found."%(R,N)
 		if len(cp) !=0:
 			print "\n%s[-]%s checkpoint: %s"%(O,N,len(cp))
 			for x in cp:
-				print "[%s-%s] %s"%(O,N,x)
+				print "[%s-%s] %s"%(O,N,x.replace("\n",""))
 					
 	def pol(self,list):
 		global cp,fo
