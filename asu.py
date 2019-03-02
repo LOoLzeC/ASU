@@ -46,7 +46,6 @@ class ASU:
 			pass
 		elif (asw == "2" or asw == "02"):
 			dumpper.pilihan()
-			multiBruteforce._prepares()
 		elif (asw == "3" or asw == "03"):
 			try:
 				print("\n\t[ Select Actions ]\n")
