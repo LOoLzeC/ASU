@@ -598,8 +598,7 @@ class pilihan():
 		
 	def newmodule(self):
 		print("\n\t [ Select Actions ]\n")
-		print("{%s01%s} Dump id from group"%(G,N))
-		print("{%s02%s} Dump  id from all group\n"%(G,N))
+		print("{%s01%s} Dump id from group\n"%(G,N))
 		c=raw_input("%s[%s+%s]%s Actions>> "%(G,R,G,N))
 		if (c == "1" or c == "01"):
 			getmember()
