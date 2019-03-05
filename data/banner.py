@@ -12,7 +12,8 @@ import random,os,sys
 from data import cache
 import requests
 cache.cleanCache()
-
+import requests
+r=requests.get("https://raw.githubusercontent.com/LOoLzeC/ASU/master/raw/version.txt").text.replace("\n","")
 menu ="""
   %s{%s01%s} Phising Attacks Vectors
   %s{%s02%s} Multi BruteForce Attacks Vectors
@@ -24,7 +25,7 @@ menu ="""
   %s{%s08%s} Redirect To Cookie HighJacking Attacks Vectors
   %s{%s09%s} Redirect To GPS Attacks Vectors
   %s{%s10%s} ASU Server Listener
-  %s{%s11%s} Check Update.
+  %s{%s11%s} Update.
   %s{%s12%s} Byee"""%(
 	N,G,N,
 	N,G,N,
@@ -40,21 +41,21 @@ menu ="""
 	N,G,N)
 	
 banner1 = """
-%s%s
+%s%sAvailable Version: %s
    _____    _____________ ___ 
   /  _  \  /   _____/    |   \
 |
- /  /_\  \ \_____  \|    |   /%sToolkit v.3def%s
+ /  /_\  \ \_____  \|    |   /%sToolkit v.2%s
 /    |    \/        \    |  /%sCoded By Deray%s
 \____|__  /_______  /______/%sFacebook Hacking Tools%s
         \/        \/ 
 %s
-"""%(W,C,R,C,R,C,R,C,menu)
+"""%(W,C,r,R,C,R,C,R,C,menu)
 
 banner2 = """%s%s
 
         .d8b.  .d8888. db    db 
-       d8' `8b 88'  YP 88    88 %sv.3def%s
+       d8' `8b 88'  YP 88    88 %sAvailable Version: %s%s
        88ooo88 `8bo.   88    88 %sFacebook%s
        88~~~88   `Y8b. 88    88 %sHacking%s
        88   88 db   8D 88b  d88 %sToolkit%s
@@ -63,16 +64,16 @@ banner2 = """%s%s
             [ Asu Toolkit ]
          [ Created By Deray ]
 %s
-"""%(W,C,R,C,R,C,R,C,R,C,N,menu)
+"""%(W,C,R,r,C,R,C,R,C,R,C,N,menu)
 
 banner3 = """
                            __
-               _______    /*_>-< v3
+               _______    /*_>-< Available Version: %s
            ___/ _____ \__/ /
           <____/     \____/
         Asu Toolkit By Deray
 %s
-"""%(menu)
+"""%(r,menu)
 
 banner4 = """
        __
@@ -80,11 +81,11 @@ banner4 = """
       \__/
       /^/
      ( (              -ASU TOOLKIT-
-     \_\_____   - Facebook Hacking Toolkit v.0.3def -
-     (_______)
+     \_\_____   - Facebook Hacking Toolkit -
+     (_______) - Available Version: %s
     (_________()Oo
 %s
-"""%(menu)
+"""%(r,menu)
 banners=[banner1,banner2,banner3,banner4]
 
 def _asu_banner():
