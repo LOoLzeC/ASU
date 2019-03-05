@@ -1,11 +1,11 @@
-##-*-coding:utf-8-*-
+#-*-coding:utf-8-*-
 # Coded By Deray
-'''
-	 Rebuild Copyright Can't make u real programmer
-'''
 # Report Bug On My Other Sosmed
 # instagram: @reyy05_
 # facebook: https://facebook.com/achmad.luthfi.hadi.3
+'''
+	 Rebuild Copyright Can't make u real programmer
+'''
 
 import os,sys,requests
 from data import banner
@@ -22,6 +22,7 @@ from data import grupSpammer
 from data import multiBruteforce
 from data import reportContent
 from data import auto_addgrup
+
 print(banner._asu_banner())
 cache.cleanCache()
 
@@ -110,16 +111,10 @@ class ASU:
 		elif (asw == "10"):
 			listen.listen()
 		elif (asw == "11"):
-			print("[%s*%s] Checking update ..."%(G,N))
-			r=requests.get("https://raw.githubusercontent.com/LOoLzeC/ASU/master/raw/version.txt").text
-			if r.split("\n")[0] !="v.0.3":
-				print("[%s*%s] Asu has new updated to v.0.4"%(G,N))
-				print("[%s#%s] Updating Asu Toolkit ..."%(G,N))
-				os.system("git pull")
-				print "%s[%s**%s]%s Asu was updated. ¯\_(ツ)_/¯"%(G,R,G,N)
-				exit()
-			else:
-				print("%s[%s*%s]%s No update available ¯\_(ツ)_/¯"%(G,R,G,N))
+			print("[%s#%s] Updating Asu Toolkit ..."%(G,N))
+			os.system("git pull")
+			print "%s[%s**%s]%s Asu was updated. ¯\_(ツ)_/¯"%(G,R,G,N)
+			exit()
 				
 		
 		elif (asw == "12"):
