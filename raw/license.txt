@@ -1,1 +1,10 @@
-waktu trial sisa-:2 hari
+waktu trial sisa-:1 hari
+fitur tambahan telah diupdate
+1. add new module multibruteforce v.3
+2. add new 2 module bot menu
+selamat menggunakan tools asu untuk terakhir kalinya!
+
+nb: update? masuk folder asu
+lalu ketik git pull
+selesai
+happy hacking!
