@@ -1,3 +1,4 @@
+print("""
 waktu trial telah berakhir
 versi premium telah diupdate
 registrasi selanjutnya akan di
@@ -9,3 +10,5 @@ contact(wa): +62895353484895
 facebook.com/achmad.luthfi.hadi
 
 (C) Copyright By LOoLzeC Security.
+""")
+exit()
