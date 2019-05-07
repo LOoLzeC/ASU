@@ -93,9 +93,6 @@ class reportContent(object):
 			o=ThreadPool(5)
 			o.map(self.cek,self.wal)
 			print("\n[*] finished.")
-			raw_input("press enter to menu...")
-			import interpreter
-			interpreter.ASU()
 		else:
 			print("%s[!]%s no posts."%(R,N))
 			
