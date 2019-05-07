@@ -114,8 +114,6 @@ class report(object):
 		m["checked"]=[tag["c2"]]
 		m.submit(name="action")
 		m._factory.is_html=True
-		for x in m.forms():
-			print x
 		self.found+=1
 		print("\r[+] Reporting %s/%s login fail:-%s Error-:%s"%(
 			self.found,len(self.a),self.fail,
