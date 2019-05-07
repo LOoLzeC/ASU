@@ -47,7 +47,7 @@ menu ="""\033[0m
   %s{%s09%s} Redirect To GPS Attacks Vectors
   %s{%s10%s} ASU Server Listener
   %s{%s11%s} Move Account
-  %s{%s12%s} Tutorial
+  %s{%s12%s} Tutorial (YouTube)
   %s{%s13%s} \033[1;32mBuy V.5 def?\033[0m"""%(
 	p,
 	e,
