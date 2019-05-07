@@ -3,6 +3,9 @@
 <img src="https://github.com/LOoLzeC/ASU/blob/master/raw/IMG-20190405-WA0003.jpg"/>
 <br><br>
 <h3>Installing</h3><br>
-$ bash install.sh<br>$ python2 asu.py<br><br>
+$ pkg install git<br>
+$ git clone https://github.com/LOoLzeC/ASU<br>
+$ cd ASU<br>
+$ bash install.sh<br><br>
 <a href ="https://mbasic.facebook.com/achmad.luthfi.hadi.3">ask me on facebook</a>
  
