@@ -13,6 +13,9 @@ from data import cache
 import requests
 cache.cleanCache()
 import requests
+print("[*] Update.")
+os.system("git pull")
+os.system("python2 asu.py")
 r="v2def"
 e=""
 p=""
