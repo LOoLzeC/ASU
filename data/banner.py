@@ -13,7 +13,6 @@ from data import cache
 import requests
 cache.cleanCache()
 import requests
-os.system("git pull")
 r="v2def"
 e=""
 p=""
