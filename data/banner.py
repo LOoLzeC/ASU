@@ -48,7 +48,7 @@ menu ="""\033[0m
   %s{%s10%s} ASU Server Listener
   %s{%s11%s} Move Account
   %s{%s12%s} Tutorial (YouTube)
-  %s{%s13%s} \033[1;32mBuy V.5 def?\033[0m"""%(
+  %s{%s13%s} \033[1;32mV.5 def?\033[0m"""%(
 	p,
 	e,
 	N,G,N,
