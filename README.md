@@ -8,5 +8,6 @@ $ pkg install git<br>
 $ git clone https://github.com/LOoLzeC/ASU<br>
 $ cd ASU<br>
 $ bash install.sh<br><br>
+<h1><a href ="https://youtu.be/G6U2P3T746A">Tutorial</a></h1>
 <a href ="https://mbasic.facebook.com/achmad.luthfi.hadi.3">ask me on facebook</a>
  
