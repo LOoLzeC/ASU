@@ -1,0 +1,62 @@
+CANNOT LINK EXECUTABLE: cannot locate symbol "iconv_open" referenced by "php"...
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+connect_to localhost port 8080: failed.
+[32mForwarding HTTP traffic from https://f.serveo.net
+[0mHTTP request from 104.248.254.127 to http://f.serveo.net/
+connect_to localhost port 8080: failed.
+HTTP request from 104.248.254.127 to http://f.serveo.net/
+connect_to localhost port 8080: failed.
+HTTP request from 104.248.254.127 to http://f.serveo.net/
+connect_to localhost port 8080: failed.
+HTTP request from 104.248.254.127 to http://f.serveo.net/
+connect_to localhost port 8080: failed.
+HTTP request from 104.248.254.127 to http://f.serveo.net/
+connect_to localhost port 8080: failed.
+HTTP request from 104.248.254.127 to http://f.serveo.net/
+connect_to localhost port 8080: failed.
+HTTP request from 104.248.254.127 to http://f.serveo.net/
+connect_to localhost port 8080: failed.
+HTTP request from 104.248.254.127 to http://f.serveo.net/
+connect_to localhost port 8080: failed.
+HTTP request from 104.248.254.127 to http://f.serveo.net/
+connect_to localhost port 8080: failed.
+HTTP request from 104.248.254.127 to http://f.serveo.net/
+connect_to localhost port 8080: failed.
+HTTP request from 104.248.254.127 to http://f.serveo.net/
+connect_to localhost port 8080: failed.
+HTTP request from 104.248.254.127 to http://f.serveo.net/
+connect_to localhost port 8080: failed.
+HTTP request from 104.248.254.127 to http://f.serveo.net/
+connect_to localhost port 8080: failed.
+HTTP request from 104.248.254.127 to http://f.serveo.net/
+connect_to localhost port 8080: failed.
+HTTP request from 104.248.254.127 to http://f.serveo.net/
+connect_to localhost port 8080: failed.
+HTTP request from 104.248.254.127 to http://f.serveo.net/
+connect_to localhost port 8080: failed.
+HTTP request from 104.248.254.127 to http://f.serveo.net/
+connect_to localhost port 8080: failed.
+HTTP request from 104.248.254.127 to http://f.serveo.net/
+connect_to localhost port 8080: failed.
+HTTP request from 104.248.254.127 to http://f.serveo.net/
+connect_to localhost port 8080: failed.
+HTTP request from 104.248.254.127 to http://f.serveo.net/
+connect_to localhost port 8080: failed.
+HTTP request from 104.248.254.127 to http://f.serveo.net/
+connect_to localhost port 8080: failed.
+HTTP request from 104.248.254.127 to http://f.serveo.net/
+connect_to localhost port 8080: failed.
+HTTP request from 104.248.254.127 to http://f.serveo.net/
+connect_to localhost port 8080: failed.
+HTTP request from 104.248.254.127 to http://f.serveo.net/
+connect_to localhost port 8080: failed.
+HTTP request from 104.248.254.127 to http://f.serveo.net/
+connect_to localhost port 8080: failed.
+HTTP request from 104.248.254.127 to http://f.serveo.net/
+connect_to localhost port 8080: failed.
+HTTP request from 104.248.254.127 to http://f.serveo.net/
+connect_to localhost port 8080: failed.
+HTTP request from 104.248.254.127 to http://f.serveo.net/
+connect_to localhost port 8080: failed.
+HTTP request from 104.248.254.127 to http://f.serveo.net/
+connect_to localhost port 8080: failed.
