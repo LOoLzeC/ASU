@@ -1,1 +1,2 @@
-
+apt update
+apt upgrade 
